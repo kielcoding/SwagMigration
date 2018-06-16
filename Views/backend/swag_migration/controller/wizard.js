@@ -122,7 +122,7 @@ Ext.define('Shopware.apps.SwagMigration.controller.Wizard', {
                         } else {
                             activeCard.setShowPasswordInfo(true);
                         }
-                        if (profile === 'Prestashop14' || profile === 'Prestashop15') {
+                        if (profile === 'Prestashop14' || profile === 'Prestashop15' || profile === 'Opencart23') {
                             activeCard.setSaltInputNeeded(true);
                         } else {
                             activeCard.setSaltInputNeeded(false);

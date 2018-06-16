@@ -273,6 +273,7 @@ class Shopware_Controllers_Backend_SwagMigration extends Shopware_Controllers_Ba
             ['id' => 'Prestashop15', 'name' => $this->getNamespace()->get('profile-presta')],
             ['id' => 'Prestashop14', 'name' => $this->getNamespace()->get('profile-presta-old')],
             ['id' => 'WooCommerce', 'name' => $this->getNamespace()->get('profile-woo')],
+            ['id' => 'OpenCart23', 'name' => $this->getNamespace()->get('profile-opencart')],
         ];
         echo Zend_Json::encode(['data' => $rows, 'count' => count($rows)]);
     }
