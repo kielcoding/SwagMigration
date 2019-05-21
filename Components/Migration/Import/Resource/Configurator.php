@@ -134,7 +134,7 @@ class Configurator extends AbstractResource
                     "
                         SELECT `id`
                         FROM `s_article_configurator_groups`
-                        WHERE `name`='{$group}' LIMIT 1"
+                        WHERE BINARY `name` = BINARY '{$group}' LIMIT 1"
                 );
                 if ($groupId === false) {
                     $sql = "INSERT INTO `s_article_configurator_groups` (`name`, `position`) VALUES ('{$group}', {$group_position})";
