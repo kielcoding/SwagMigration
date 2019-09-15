@@ -265,7 +265,7 @@ class Property extends AbstractResource
 
                 // Create option
                 if ($valueId === false && isset($value['value'])) {
-                    $sql = 'INSERT INTO `s_filter_values` (`value`, `optionId`, `position`) VALUES(?, ?, ?)';
+                    $sql = 'INSERT IGNORE INTO `s_filter_values` (`value`, `optionId`, `position`) VALUES(?, ?, ?)';
                     Shopware()->Db()->query($sql, [$value['value'], $optionId, $value['position']]);
                     $valueId = Shopware()->Db()->lastInsertId();
                 }
